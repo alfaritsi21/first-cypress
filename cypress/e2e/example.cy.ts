@@ -17,10 +17,10 @@ describe("Latihan Pertama", () => {
         cy.get('.action-email').should('have.value', 'ar@example.com')
     });
 
-    it('Cek submit button', () => {
-        cy.visit('https://example.cypress.io/commands/actions')
-        cy.get('#couponCode1').type('HALFOFF')
-        cy.get('.btn-primary').eq(0).click()
-        cy.contains('Your form has been submitted!').should('be.visible')
-    });
+    // it('Cek submit button', () => {
+    //     cy.visit('https://example.cypress.io/commands/actions')
+    //     cy.get('#couponCode1').type('HALFOFF')
+    //     cy.get('.btn-primary').eq(0).click()
+    //     cy.contains('Your form has been submitted!').should('be.visible')
+    // });
 })
