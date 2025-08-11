@@ -17,7 +17,19 @@ describe('Testing Hooks', () => {
     });
 
     it('check the todo', () => {
-        cy.get('.toggle').check()
+        cy.get('.toggle').eq(0).check()
+    });
+
+    it('destroy the todo', () => {
+        // cy.get('.todo-list li').eq(0).realHover()
+        // cy.get('.destroy.todo-button').eq(0).should('be.visible')
+        cy.get('.destroy.todo-button').eq(0).click({ force: true })
+    });
+
+    it('See completed todo', () => {
+        cy.get('.toggle').eq(0).check()
+        cy.get('.filters li').contains('Completed').click()
+        cy.get('.todo-button.clear-completed').click()
     });
 
     afterEach(() => {
